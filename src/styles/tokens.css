@@ -1,0 +1,42 @@
+/* Oyna design tokens — monochrome system drawn from the Flutter app palette. */
+:root {
+  --ink: #000000;
+  --paper: #ffffff;
+  --charcoal: #1a1c1f;
+  --coal: #2e3034;
+  --slate: #414755;
+  --muted: #717786;
+  --line: #e2e2e7;
+  --mist: #f3f3f8;
+  --wash: #f9f9fe;
+  --veil: #ededf2;
+
+  --font-display: "Manrope", "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 34px;
+  --r-pill: 999px;
+
+  --shadow-soft: 0 24px 60px -24px rgb(0 0 0 / 0.28);
+  --shadow-card: 0 12px 32px -16px rgb(0 0 0 / 0.22);
+  --shadow-lift: 0 32px 80px -32px rgb(0 0 0 / 0.4);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.34, 1.3, 0.64, 1);
+  --dur-fast: 160ms;
+  --dur-med: 320ms;
+  --dur-slow: 640ms;
+
+  --page-max: 1200px;
+  --gutter: clamp(20px, 5vw, 48px);
+  --header-h: 72px;
+
+  --text-1: clamp(0.95rem, 0.9rem + 0.25vw, 1.075rem);
+  --text-2: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
+  --display-1: clamp(2.4rem, 1.6rem + 4.2vw, 4.6rem);
+  --display-2: clamp(1.9rem, 1.45rem + 2.4vw, 3.1rem);
+  --display-3: clamp(1.45rem, 1.25rem + 1.1vw, 2rem);
+}

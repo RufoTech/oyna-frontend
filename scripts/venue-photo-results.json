@@ -1,0 +1,134 @@
+{
+  "game-club-rustam": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/72647549272/",
+    "image": "https://avatars.mds.yandex.net/get-altay/9724410/2a00000189031125f4b07ae5037a7c44ae10/L_height",
+    "local": "/venues/game-club-rustam.jpg"
+  },
+  "chill-game": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "vegas-bakixanov": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "spider-club": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "vega-pro": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "cybernet": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/198582285234/",
+    "image": "https://avatars.mds.yandex.net/get-altay/18005133/2a0000019c14b7fa0abca9aa90dcaada59d0/L_height",
+    "local": "/venues/cybernet.jpg"
+  },
+  "extra-club": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/237668088990/",
+    "image": "https://avatars.mds.yandex.net/get-altay/14020851/2a00000192f1d5fc671a37ad2fc1ac9de2e6/L_height",
+    "local": "/venues/extra-club.jpg"
+  },
+  "laliga-nizami": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "laliga-genclik": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "gamezone-baku": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/172285105393/",
+    "image": "https://avatars.mds.yandex.net/get-altay/777564/2a00000185b782b8106efcc90dcdd4142779/L_height",
+    "local": "/venues/gamezone-baku.jpg"
+  },
+  "bizon-esports": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/aveny28/165843399328/",
+    "image": "https://avatars.mds.yandex.net/get-altay/3932123/2a000001766a36ad805bb478a3638bd97d6d/L_height",
+    "local": "/venues/bizon-esports.jpg"
+  },
+  "park-net": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "vip-game": {
+    "ok": false,
+    "reason": "HTTP 403"
+  },
+  "dark-game": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/110693480632/",
+    "image": "https://avatars.mds.yandex.net/get-altay/11924971/2a0000018f9675b9d2b522794416e52c41ea/L_height",
+    "local": "/venues/dark-game.jpg"
+  },
+  "play-city": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "warpoint": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "speed-klub": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/117193622183/",
+    "image": "https://avatars.mds.yandex.net/get-altay/13590061/6e3d35ff94da9d864a1db5ac86bcd905.jpg/L_height",
+    "local": "/venues/speed-klub.jpg"
+  },
+  "qarabag-ps": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/202351664514/",
+    "image": "https://avatars.mds.yandex.net/get-altay/6236655/2a0000018eee60857dfc81da1cfccbaf68ae/L_height",
+    "local": "/venues/qarabag-ps.jpg"
+  },
+  "lmntrix": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "turkuaz": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "fairplay": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/138983340449/menu/",
+    "image": "https://avatars.mds.yandex.net/get-altay/758957/2a0000018708fa47e85908d9f3f65c954c41/L_height",
+    "local": "/venues/fairplay.jpg"
+  },
+  "good-game-genclik": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "onside": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "mundial": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/185618534582/",
+    "image": "https://avatars.mds.yandex.net/get-altay/9761215/2a0000018b2c73b8593f85a64e292a0f865b/L_height",
+    "local": "/venues/mundial.jpg"
+  },
+  "for-gamer": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/172829198723/",
+    "image": "https://avatars.mds.yandex.net/get-altay/19532714/2a0000019d4b30c971a7f044b30f1cc7e355/L_height",
+    "local": "/venues/for-gamer.jpg"
+  },
+  "legion-ps": {
+    "ok": false,
+    "reason": "no_org"
+  },
+  "360-gamezone": {
+    "ok": true,
+    "org": "https://yandex.az/maps/org/7545041753/",
+    "image": "https://avatars.mds.yandex.net/get-altay/20288375/2a0000019e515a87aa090cf1cfd82182bbd8/L_height",
+    "local": "/venues/360-gamezone.jpg"
+  }
+}

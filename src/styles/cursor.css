@@ -1,0 +1,137 @@
+/* Custom cursor — monoxrom sistem, difference blend ilə açıq/qaranlıq uyğunluq. */
+
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  /* Blend MÜTLƏQ konteynerdə olmalıdır: uşaqdakı blend yalnız
+     valideynin şəffaf qrupu ilə qarışır, səhifə ilə yox. */
+  mix-blend-mode: difference;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Mərkəzləşdirmə translate ilə deyil, margin ilə — transform rAF-ə aiddir */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: #fff;
+  transition: opacity 240ms var(--ease-out);
+}
+
+.cursor-dot[data-visible="true"] {
+  opacity: 1;
+}
+
+.cursor-dot[data-pressed="true"] {
+  opacity: 0.55;
+}
+
+.cursor-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0 -19px;
+  transition:
+    opacity 240ms var(--ease-out),
+    width var(--dur-med) var(--ease-out),
+    height var(--dur-med) var(--ease-out),
+    margin var(--dur-med) var(--ease-out);
+}
+
+.cursor-ring[data-visible="true"] {
+  opacity: 1;
+}
+
+/* Görünən dairə ayrıca daxili elementdir: JS transform-u xarici qutuya
+   yazır, CSS scale-i yalnız daxiliyə tətbiq olunur. scale-i birbaşa
+   halqaya qoymaq translate koordinatını da vurur və klikdə halqanı
+   səhifənin küncünə doğru "qaçırdır" — ona görə ayrılıb. */
+.cursor-ring-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    background-color var(--dur-med) var(--ease-out),
+    border-color var(--dur-med) var(--ease-out);
+}
+
+/* İnteraktiv elementlər: halqa böyüyür, içi dolur (difference ilə inversiya) */
+.cursor-ring[data-state="hover"] {
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+}
+
+.cursor-ring[data-state="hover"] .cursor-ring-circle {
+  background: rgb(255 255 255 / 0.96);
+  border-color: transparent;
+}
+
+.cursor-ring[data-pressed="true"] .cursor-ring-circle {
+  transform: scale(0.82);
+}
+
+/* Mətnli nişan: qrup blend-i ilə avtomatik inversiya —
+   açıq fonda qara dairə/ağ mətn, qaranlıqda ağ dairə/qara mətn */
+.cursor-ring[data-state="label"] {
+  width: 78px;
+  height: 78px;
+  margin: -39px 0 0 -39px;
+}
+
+.cursor-ring[data-state="label"] .cursor-ring-circle {
+  background: #fff;
+  border-color: #fff;
+}
+
+.cursor-label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+  animation: cursor-label-in var(--dur-fast) var(--ease-out);
+}
+
+@keyframes cursor-label-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom cursor aktivdirsə yerli kursoru gizlət (hər yerdə, xəritə daxil) */
+body.has-custom-cursor,
+body.has-custom-cursor * {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
