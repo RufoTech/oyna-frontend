@@ -140,12 +140,13 @@ const FLOW_TIMES = ["18:00", "20:30", "22:00"];
 
 export function ScreenMap() {
   const venue = demoVenues[0];
+  const minPrice = venue.tiers[0]?.pricePerHour ?? 2;
   return (
     <div className="oscreen omap">
       <iframe
         className="omap-frame"
-        title="Demo xəritə — Google Maps"
-        src="https://www.google.com/maps?q=28+May+metro+Baku&z=15&output=embed"
+        title="Bizon E-Sports — xəritə"
+        src="https://www.google.com/maps?q=40.3798619,49.8486359&z=15&output=embed"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         tabIndex={-1}
@@ -171,19 +172,19 @@ export function ScreenMap() {
           <span className="odrag" aria-hidden="true" />
           <div className="ovenue-row">
             <span className="ovenue-img" aria-hidden="true">
-              <GamepadGlyph />
+              <img src={venue.photo} alt="" loading="lazy" decoding="async" />
             </span>
             <div className="ovenue-info">
               <span className="ostatus">İNDİ AÇIQDIR</span>
               <strong>{venue.name}</strong>
               <small>
-                <Mi d={P.pin} size={12} /> 28 May · {venue.distance}
+                <Mi d={P.pin} size={12} /> {venue.area} · {venue.distance}
               </small>
             </div>
           </div>
           <div className="ovenue-foot">
             <span className="oprice">
-              2 AZN<small>/saat-dan</small>
+              {minPrice} AZN<small>/saat-dan</small>
             </span>
             <span className="obook">Rezerv et</span>
           </div>
@@ -209,12 +210,16 @@ export function ScreenVenue() {
   return (
     <div className="oscreen ovenue">
       <div className="ohero">
+        <img
+          className="ohero-photo"
+          src={venue.photo}
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
         <div className="ohero-status">
           <StatusBar dark />
         </div>
-        <span className="ohero-art" aria-hidden="true">
-          <GamepadGlyph size={64} />
-        </span>
         <div className="ohero-top">
           <span className="ocircle-btn" aria-hidden="true">
             <Mi d={P.back} size={18} />

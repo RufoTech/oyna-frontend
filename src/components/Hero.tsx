@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import { demoVenues } from "../data/demo";
 import { useReducedMotion } from "../hooks";
+import { markLoaded, setLoadProgress } from "../loading";
 import type { StationHandle } from "../three/station";
 
 /** Intentionally-designed static poster shown if WebGL is unavailable. */
 function HeroFallback() {
+  const [primary, second, third] = demoVenues;
+  const price = (v: (typeof demoVenues)[number]) =>
+    v.tiers[0]?.pricePerHour ?? 2;
   return (
     <div className="hero-fallback" aria-hidden="true">
       <div className="hero-fallback-glow" />
@@ -20,23 +25,25 @@ function HeroFallback() {
             <span className="hf-pin p3 hot" />
             <span className="hf-pin p4" />
             <div className="hf-card">
-              <strong>Nümunə Klub</strong>
-              <small>★ 4.8 · 350 m</small>
+              <strong>{primary.name}</strong>
+              <small>
+                ★ {primary.rating} · {primary.distance}
+              </small>
               <em>Rezerv et</em>
             </div>
           </div>
           <div className="hf-list">
             <div className="hf-row hot">
-              <strong>Nümunə Klub</strong>
-              <small>2 AZN/saat</small>
+              <strong>{primary.name}</strong>
+              <small>{price(primary)} AZN/saat</small>
             </div>
             <div className="hf-row">
-              <strong>Nümunə Arena</strong>
-              <small>3.5 AZN/saat</small>
+              <strong>{second.name}</strong>
+              <small>{price(second)} AZN/saat</small>
             </div>
             <div className="hf-row">
-              <strong>Nümunə Lounge</strong>
-              <small>5 AZN/saat</small>
+              <strong>{third.name}</strong>
+              <small>{price(third)} AZN/saat</small>
             </div>
           </div>
         </div>
@@ -78,12 +85,20 @@ function HeroScene() {
         if (disposed) return;
         station = mod.createStation(canvas, {
           reducedMotion: reduced,
-          onReady: () => setReady(true),
+          onProgress: setLoadProgress,
+          onReady: () => {
+            setReady(true);
+            markLoaded();
+          },
         });
         stationRef.current = station;
         station?.setVisible(wantVisible);
-        if (!station && !disposed) setFailed(true);
+        if (!station) {
+          markLoaded();
+          if (!disposed) setFailed(true);
+        }
       } catch {
+        markLoaded();
         if (!disposed) setFailed(true);
       }
     };

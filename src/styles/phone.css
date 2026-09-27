@@ -391,11 +391,18 @@
   height: 62px;
   border-radius: 16px;
   flex-shrink: 0;
-  background: radial-gradient(90% 110% at 25% 15%, #4a4e56 0%, #232529 60%, #141518 100%);
+  background: #232529;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  overflow: hidden;
+}
+
+.ovenue-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ovenue-info {
@@ -528,11 +535,21 @@
   position: relative;
   height: 208px;
   flex-shrink: 0;
-  background: radial-gradient(90% 120% at 25% 10%, #4a4e56 0%, #232529 60%, #101114 100%);
+  background: #101114;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  overflow: hidden;
+}
+
+.ohero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .ohero::after {
@@ -543,10 +560,6 @@
   background: linear-gradient(transparent, #f9f9fe);
 }
 
-.ohero-art {
-  opacity: 0.9;
-}
-
 .ohero-top {
   position: absolute;
   top: 52px;
@@ -554,6 +567,11 @@
   right: 14px;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
+}
+
+.ohero-status {
+  position: relative;
   z-index: 2;
 }
 

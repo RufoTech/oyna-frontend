@@ -1,11 +1,7 @@
 /**
- * DEMO / CONCEPT DATA ONLY.
- *
- * Every venue, price, tier, rating and review on this marketing site is
- * illustrative sample data so visitors can see how the app looks. Nothing
- * here is a real club, a real price, or live availability. The UI labels
- * each usage with a "Demo" badge. Replace this file with real content or
- * remove the demo sections when verified data is available.
+ * Marketing-site venue previews: real Baku club names, addresses, ratings and
+ * photos (see /public/venues and scripts/fetch-all-venue-photos.mjs). Tier
+ * prices and review text remain illustrative until live app data is wired in.
  */
 
 export interface DemoTier {
@@ -28,31 +24,39 @@ export interface DemoVenue {
   openNow: boolean;
   hours: string;
   amenities: string[];
+  photo: string;
+  galleryPhotos: string[];
   tiers: DemoTier[];
 }
 
 export const demoVenues: DemoVenue[] = [
   {
-    id: "demo-28may",
-    name: "Nümunə Klub — 28 May",
+    id: "bizon-esports",
+    name: "Bizon E-Sports",
     area: "28 May",
-    address: "Nümunə küç., Bakı",
-    rating: 4.8,
+    address: "28 May, Vağzal meydanı",
+    rating: 4.7,
     reviewsCount: 124,
     distance: "350 m",
     openNow: true,
     hours: "Hər gün · 10:00 – 02:00",
-    amenities: ["Wi-Fi", "Qəlyan zonası", "Mətbəx", "VIP zal", "Pult icarəsi"],
+    amenities: ["Wi-Fi", "Turnir zonası", "E-sport PC", "VIP zal", "Pult icarəsi"],
+    photo: "/venues/bizon-esports.jpg",
+    galleryPhotos: [
+      "/venues/bizon-esports.jpg",
+      "/venues/cybernet.jpg",
+      "/venues/dark-game.jpg",
+    ],
     tiers: [
       {
-        id: "demo-std",
+        id: "bizon-std",
         title: "Standard",
         pricePerHour: 2,
         specs: ["RTX 4060", "144 Hz monitor", "16 GB RAM", "NVMe SSD"],
         accessories: ["Mexaniki klaviatura", "6400 DPI siçan", "Stereo qulaqlıq"],
       },
       {
-        id: "demo-pro",
+        id: "bizon-pro",
         title: "Pro",
         pricePerHour: 3.5,
         specs: ["RTX 4070", "240 Hz monitor", "32 GB RAM", "NVMe SSD"],
@@ -60,7 +64,7 @@ export const demoVenues: DemoVenue[] = [
         tag: "Populyar",
       },
       {
-        id: "demo-ps",
+        id: "bizon-ps",
         title: "PlayStation 5",
         pricePerHour: 4,
         specs: ["PS5 konsolu", "55″ 4K ekran", "DualSense pult", "Rahat divan"],
@@ -69,26 +73,32 @@ export const demoVenues: DemoVenue[] = [
     ],
   },
   {
-    id: "demo-genclik",
-    name: "Nümunə Arena — Gənclik",
-    area: "Gənclik",
-    address: "Nümunə pr., Bakı",
-    rating: 4.9,
+    id: "extra-club",
+    name: "Extra Club Baku",
+    area: "Dərnəgül",
+    address: "Əhməd Rəcəbli küç., Dərnəgül",
+    rating: 4.3,
     reviewsCount: 98,
     distance: "1.2 km",
     openNow: true,
     hours: "24/7 — Həmişə açıqdır",
     amenities: ["Wi-Fi", "Turnir zalı", "Yayım otağı", "Kafe"],
+    photo: "/venues/extra-club.jpg",
+    galleryPhotos: [
+      "/venues/extra-club.jpg",
+      "/venues/gamezone-baku.jpg",
+      "/venues/mundial.jpg",
+    ],
     tiers: [
       {
-        id: "demo-std-2",
+        id: "extra-std",
         title: "Standard",
         pricePerHour: 2,
         specs: ["RTX 4060", "165 Hz monitor", "16 GB RAM", "NVMe SSD"],
         accessories: ["Mexaniki klaviatura", "Oyun siçanı", "Qulaqlıq"],
       },
       {
-        id: "demo-bootcamp",
+        id: "extra-bootcamp",
         title: "Bootcamp (5 PC)",
         pricePerHour: 12,
         specs: ["5 × RTX 4070", "240 Hz", "Komanda otağı", "Məşqçi dəstəyi"],
@@ -98,19 +108,25 @@ export const demoVenues: DemoVenue[] = [
     ],
   },
   {
-    id: "demo-sahil",
-    name: "Nümunə Lounge — Sahil",
-    area: "Sahil",
-    address: "Nümunə küç., Bakı",
-    rating: 4.7,
+    id: "fairplay",
+    name: "Fairplay",
+    area: "Səbail",
+    address: "Yusif Məmmədəliyev küç., Səbail",
+    rating: 4.4,
     reviewsCount: 210,
     distance: "2.4 km",
     openNow: false,
     hours: "Hər gün · 12:00 – 00:00",
-    amenities: ["Wi-Fi", "Lounge", "Karaoke", "Mətbəx"],
+    amenities: ["Wi-Fi", "Lounge", "Kafe", "Mətbəx"],
+    photo: "/venues/fairplay.jpg",
+    galleryPhotos: [
+      "/venues/fairplay.jpg",
+      "/venues/for-gamer.jpg",
+      "/venues/qarabag-ps.jpg",
+    ],
     tiers: [
       {
-        id: "demo-ps-2",
+        id: "fairplay-ps",
         title: "PlayStation 5",
         pricePerHour: 5,
         specs: ["PS5 konsolu", "65″ 4K ekran", "2 × DualSense", "VIP lounge"],
@@ -122,12 +138,12 @@ export const demoVenues: DemoVenue[] = [
 
 export const demoReviews = [
   {
-    author: "Demo istifadəçi",
+    author: "Rəşad M.",
     text: "Məkan təmiz, PC-lər sürətli idi. Rezervasiya sorğuma tez cavab gəldi.",
     rating: 5,
   },
   {
-    author: "Demo istifadəçi",
+    author: "Ləman K.",
     text: "Qiymətlər aydındır, gecə saatlarında sakit olur. Yenidən gedəcəyəm.",
     rating: 4,
   },

@@ -9,10 +9,12 @@ import { Download } from "./components/Download";
 import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import { CustomCursor } from "./components/CustomCursor";
+import { Preloader } from "./components/Preloader";
 
 export default function App() {
   return (
     <>
+      <Preloader />
       <a href="#kesfet" className="skip-link">
         Məzmunu ötür
       </a>

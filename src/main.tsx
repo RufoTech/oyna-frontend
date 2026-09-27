@@ -7,6 +7,7 @@ import './styles/mid.css'
 import './styles/phone.css'
 import './styles/closing.css'
 import './styles/cursor.css'
+import './styles/preloader.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(

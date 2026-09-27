@@ -6,11 +6,17 @@ function VenueVisual() {
   const venue = demoVenues[0];
   return (
     <div className="story-visual venue-visual">
-      <span className="demo-tag">Demo məkan</span>
+      <span className="demo-tag">Bakı klubu · demo qiymətlər</span>
       <div className="vv-gallery" aria-hidden="true">
-        <div className="vv-photo main" />
-        <div className="vv-photo" />
-        <div className="vv-photo" />
+        <div className="vv-photo main">
+          <img src={venue.galleryPhotos[0]} alt="" loading="lazy" decoding="async" />
+        </div>
+        <div className="vv-photo">
+          <img src={venue.galleryPhotos[1]} alt="" loading="lazy" decoding="async" />
+        </div>
+        <div className="vv-photo">
+          <img src={venue.galleryPhotos[2]} alt="" loading="lazy" decoding="async" />
+        </div>
       </div>
       <div className="vv-body">
         <div className="vv-head">
