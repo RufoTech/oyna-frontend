@@ -18,6 +18,23 @@ export function useReducedMotion(): boolean {
   return reduced;
 }
 
+/** True on narrow viewports (mobile). Reactive to changes. */
+export function useMobileViewport(query = "(max-width: 900px)"): boolean {
+  const [mobile, setMobile] = useState(
+    () =>
+      typeof window !== "undefined" && window.matchMedia(query).matches,
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const onChange = (e: MediaQueryListEvent) => setMobile(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, [query]);
+
+  return mobile;
+}
+
 /** True once the page has scrolled past `threshold` px. */
 export function useScrolled(threshold = 24): boolean {
   const [scrolled, setScrolled] = useState(false);

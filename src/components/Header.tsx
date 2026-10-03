@@ -5,6 +5,7 @@ const links = [
   { href: "#kesfet", label: "Kəşf et" },
   { href: "#nasil-calisir", label: "Tətbiq necə işləyir" },
   { href: "#imkanlar", label: "İmkanlar" },
+  { href: "#treyler", label: "Treyler" },
   { href: "#faq", label: "FAQ" },
 ];
 

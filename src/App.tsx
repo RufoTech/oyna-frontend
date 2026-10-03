@@ -5,6 +5,7 @@ import { Story } from "./components/Story";
 import { Showcase } from "./components/Showcase";
 import { Features } from "./components/Features";
 import { ReservationDemo } from "./components/ReservationDemo";
+import { Trailer } from "./components/Trailer";
 import { Download } from "./components/Download";
 import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
@@ -26,6 +27,7 @@ export default function App() {
         <Showcase />
         <Features />
         <ReservationDemo />
+        <Trailer />
         <Download />
         <Faq />
       </main>

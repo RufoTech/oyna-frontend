@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { demoVenues } from "../data/demo";
-import { useReducedMotion } from "../hooks";
+import { useReducedMotion, useMobileViewport } from "../hooks";
 import { markLoaded, setLoadProgress } from "../loading";
 import type { StationHandle } from "../three/station";
 
@@ -63,11 +63,18 @@ function HeroScene() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const stationRef = useRef<StationHandle | null>(null);
   const reduced = useReducedMotion();
+  const isMobile = useMobileViewport();
   const [failed, setFailed] = useState(false);
   const [ready, setReady] = useState(false);
   const [spinning, setSpinning] = useState(false);
 
   useEffect(() => {
+    // On mobile the 3D scene is never loaded — a static image renders instead.
+    if (isMobile) {
+      markLoaded();
+      return;
+    }
+
     const canvas = canvasRef.current;
     const wrap = wrapRef.current;
     if (!canvas || !wrap) return;
@@ -134,7 +141,21 @@ function HeroScene() {
       station?.dispose();
       stationRef.current = null;
     };
-  }, [reduced]);
+  }, [reduced, isMobile]);
+
+  if (isMobile) {
+    return (
+      <div className="hero-scene">
+        <img
+          className="hero-mobile-img"
+          src="/hero-gaming.jpg"
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+        />
+      </div>
+    );
+  }
 
   if (failed) return <HeroFallback />;
 
@@ -204,7 +225,7 @@ export function Hero() {
             Təcrübəyə bax
           </a>
         </div>
-        <p className="hero-note">Konsept 3D səhnə · Tətbiq görüntüləri demodur</p>
+        <p className="hero-note">Tətbiq görüntüləri demodur</p>
       </div>
       <a href="#kesfet" className="scroll-cue" aria-label="Aşağı diyirlə — Kəşf et bölməsi">
         <span aria-hidden="true" />
