@@ -1186,6 +1186,7 @@
   gap: 10px;
   border: 0;
   padding: 0;
+  min-width: 0; /* fieldset can't shrink below min-content by default */
 }
 
 .res-field > span,
@@ -1395,8 +1396,16 @@
   }
 
   .showcase-grid,
-  .res-grid {
+  .res-grid,
+  .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .story-stage > *,
+  .showcase-grid > *,
+  .features-grid > *,
+  .res-grid > * {
+    min-width: 0;
   }
 
   .phone {
@@ -1419,7 +1428,13 @@
 
   .feature-wrap.large .feature {
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: flex-start;
+  }
+
+  .feature-wrap.large h3,
+  .feature-wrap.large p {
+    flex-basis: auto;
   }
 
   .res-steps {
