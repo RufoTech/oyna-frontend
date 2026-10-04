@@ -71,6 +71,14 @@ export function Footer() {
               </li>
             </ul>
           </div>
+          <div>
+            <h3>Hüquqi</h3>
+            <ul>
+              <li>
+                <a href="/privacy/">Məxfilik siyasəti</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <p className="footer-demo">
