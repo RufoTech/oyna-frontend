@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
+        'privacy-admin': resolve(__dirname, 'privacy-admin/index.html'),
       },
     },
   },
