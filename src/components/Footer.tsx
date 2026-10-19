@@ -86,7 +86,10 @@ export function Footer() {
           məqsədli demo məlumatlardır.
         </p>
         <div className="footer-bottom">
-          <small>© 2026 Oyna. Bütün hüquqlar qorunur.</small>
+          <small>
+            © 2026 Oyna — Ələkbərli Rüfət Rəfayil oğlu. Bütün hüquqlar
+            qorunur.
+          </small>
           <a href="#top" className="to-top">
             Yuxarı ↑
           </a>
