@@ -16,7 +16,7 @@ export const siteConfig = {
    * (lib/l10n/app_az.arb -> privacyPolicyContent), so it is product-source
    * verified. Owner should still confirm it is monitored.
    */
-  supportEmail: "support@oyna.app",
+  supportEmail: "support@oyna.site",
 } as const;
 
 export const hasStoreLinks =
