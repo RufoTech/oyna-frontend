@@ -14,3 +14,8 @@ Yandex Maps org photo scrape for LaLiga Game Center (Nizami / Gənclik) was bloc
 - Camp Nou Interior (2005): https://commons.wikimedia.org/wiki/File:Camp_Nou_-_Interior_(2005).jpg
 - LFP Barcelona vs Mallorca pre-match: https://commons.wikimedia.org/wiki/File:LFP_-_Barcelona_vs_Mallorca_pre-match_-_Oct_3rd_2010.jpg
 - Football pitch (Unsplash): https://unsplash.com/photos/1574629810360-7efbbe195018
+
+## Additional venue gallery fills (Unsplash)
+Replaced wrong Bizon cover (boxing gloves) and mixed Cybernet/Lark gallery:
+- bizon-esports / bizon-interior / bizon-setup: Unsplash gaming cafe photos
+- extra-interior / extra-setup, fairplay-interior / fairplay-setup: Unsplash gaming photos

@@ -87,8 +87,8 @@ export const demoVenues: DemoVenue[] = [
     photo: "/venues/bizon-esports.jpg",
     galleryPhotos: [
       "/venues/bizon-esports.jpg",
-      "/venues/cybernet.jpg",
-      "/venues/dark-game.jpg",
+      "/venues/bizon-interior.jpg",
+      "/venues/bizon-setup.jpg",
     ],
     tiers: [
       {
@@ -129,8 +129,8 @@ export const demoVenues: DemoVenue[] = [
     photo: "/venues/extra-club.jpg",
     galleryPhotos: [
       "/venues/extra-club.jpg",
-      "/venues/gamezone-baku.jpg",
-      "/venues/laliga-genclik.jpg",
+      "/venues/extra-interior.jpg",
+      "/venues/extra-setup.jpg",
     ],
     tiers: [
       {
@@ -164,8 +164,8 @@ export const demoVenues: DemoVenue[] = [
     photo: "/venues/fairplay.jpg",
     galleryPhotos: [
       "/venues/fairplay.jpg",
-      "/venues/for-gamer.jpg",
-      "/venues/qarabag-ps.jpg",
+      "/venues/fairplay-interior.jpg",
+      "/venues/fairplay-setup.jpg",
     ],
     tiers: [
       {

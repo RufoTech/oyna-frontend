@@ -121,7 +121,7 @@ function OynaNav({ active = 0 }: { active?: number }) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Shared demo flow state                                              */
+/* Shared reservation flow state                                        */
 /* ------------------------------------------------------------------ */
 
 export interface FlowState {
