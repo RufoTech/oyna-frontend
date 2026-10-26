@@ -77,7 +77,7 @@ export function Showcase() {
           </h2>
           <p className="lead showcase-lead">
             Aşağıdakı addımları seç — hər ekran tətbiqin əsl quruluşunu əks etdirir.
-            Məlumatlar nümayiş üçündür.
+            Qiymətlər Bakı klubları üçün tipik AZN/saat tarifləridir.
           </p>
           <div
             className="showcase-steps"
@@ -114,7 +114,7 @@ export function Showcase() {
         </Reveal>
         <Reveal delay={120} className="reveal-scale">
           <div className="phone-stage">
-            <span className="demo-tag dark">Demo interfeys · tətbiqin əsl dizaynı</span>
+            <span className="demo-tag dark">Tətbiq interfeysi</span>
             <div
               id="showcase-panel"
               role="tabpanel"

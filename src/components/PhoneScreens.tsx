@@ -140,13 +140,13 @@ const FLOW_TIMES = ["18:00", "20:30", "22:00"];
 
 export function ScreenMap() {
   const venue = demoVenues[0];
-  const minPrice = venue.tiers[0]?.pricePerHour ?? 2;
+  const minPrice = venue.tiers[0]?.pricePerHour ?? 4;
   return (
     <div className="oscreen omap">
       <iframe
         className="omap-frame"
-        title="Bizon E-Sports — xəritə"
-        src="https://www.google.com/maps?q=40.3798619,49.8486359&z=15&output=embed"
+        title="LaLiga Game Center — xəritə"
+        src="https://www.google.com/maps?q=40.3725836,49.8393226&z=15&output=embed"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         tabIndex={-1}

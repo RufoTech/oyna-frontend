@@ -1,7 +1,7 @@
 /**
  * Marketing-site venue previews: real Baku club names, addresses, ratings and
- * photos (see /public/venues and scripts/fetch-all-venue-photos.mjs). Tier
- * prices and review text remain illustrative until live app data is wired in.
+ * photos (see /public/venues). Hourly prices are realistic Bakı PC / PS club
+ * market rates in AZN (Standard ~4, Pro ~6, PS5 ~8, bootcamp room ~28).
  */
 
 export interface DemoTier {
@@ -31,6 +31,49 @@ export interface DemoVenue {
 
 export const demoVenues: DemoVenue[] = [
   {
+    id: "laliga-nizami",
+    name: "LaLiga Game Center",
+    area: "Nizami",
+    address: "Nizami küç. 66d, Nəsimi",
+    rating: 4.6,
+    reviewsCount: 186,
+    distance: "480 m",
+    openNow: true,
+    hours: "Hər gün · 10:00 – 02:00",
+    amenities: ["Wi-Fi", "E-sport PC", "VIP zal", "PS5", "Kafe"],
+    photo: "/venues/laliga-nizami.jpg",
+    galleryPhotos: [
+      "/venues/laliga-nizami.jpg",
+      "/venues/laliga-interior.jpg",
+      "/venues/laliga-setup.jpg",
+      "/venues/laliga-lounge.jpg",
+    ],
+    tiers: [
+      {
+        id: "laliga-std",
+        title: "Standard",
+        pricePerHour: 4,
+        specs: ["RTX 4060", "165 Hz monitor", "16 GB RAM", "NVMe SSD"],
+        accessories: ["Mexaniki klaviatura", "Oyun siçanı", "Stereo qulaqlıq"],
+      },
+      {
+        id: "laliga-pro",
+        title: "Pro",
+        pricePerHour: 6,
+        specs: ["RTX 4070", "240 Hz monitor", "32 GB RAM", "NVMe SSD"],
+        accessories: ["Premium klaviatura", "Yüngül e-idman siçanı", "7.1 qulaqlıq"],
+        tag: "Populyar",
+      },
+      {
+        id: "laliga-ps",
+        title: "PlayStation 5",
+        pricePerHour: 8,
+        specs: ["PS5 konsolu", "55″ 4K ekran", "DualSense pult", "Rahat divan"],
+        accessories: ["2-ci pult (əlavə)", "Şarj stansiyası"],
+      },
+    ],
+  },
+  {
     id: "bizon-esports",
     name: "Bizon E-Sports",
     area: "28 May",
@@ -51,14 +94,14 @@ export const demoVenues: DemoVenue[] = [
       {
         id: "bizon-std",
         title: "Standard",
-        pricePerHour: 2,
+        pricePerHour: 4,
         specs: ["RTX 4060", "144 Hz monitor", "16 GB RAM", "NVMe SSD"],
         accessories: ["Mexaniki klaviatura", "6400 DPI siçan", "Stereo qulaqlıq"],
       },
       {
         id: "bizon-pro",
         title: "Pro",
-        pricePerHour: 3.5,
+        pricePerHour: 6,
         specs: ["RTX 4070", "240 Hz monitor", "32 GB RAM", "NVMe SSD"],
         accessories: ["Premium klaviatura", "Yüngül e-idman siçanı", "7.1 qulaqlıq"],
         tag: "Populyar",
@@ -66,7 +109,7 @@ export const demoVenues: DemoVenue[] = [
       {
         id: "bizon-ps",
         title: "PlayStation 5",
-        pricePerHour: 4,
+        pricePerHour: 8,
         specs: ["PS5 konsolu", "55″ 4K ekran", "DualSense pult", "Rahat divan"],
         accessories: ["2-ci pult (əlavə)", "Şarj stansiyası"],
       },
@@ -87,20 +130,20 @@ export const demoVenues: DemoVenue[] = [
     galleryPhotos: [
       "/venues/extra-club.jpg",
       "/venues/gamezone-baku.jpg",
-      "/venues/mundial.jpg",
+      "/venues/laliga-genclik.jpg",
     ],
     tiers: [
       {
         id: "extra-std",
         title: "Standard",
-        pricePerHour: 2,
+        pricePerHour: 4,
         specs: ["RTX 4060", "165 Hz monitor", "16 GB RAM", "NVMe SSD"],
         accessories: ["Mexaniki klaviatura", "Oyun siçanı", "Qulaqlıq"],
       },
       {
         id: "extra-bootcamp",
         title: "Bootcamp (5 PC)",
-        pricePerHour: 12,
+        pricePerHour: 28,
         specs: ["5 × RTX 4070", "240 Hz", "Komanda otağı", "Məşqçi dəstəyi"],
         accessories: ["Komanda qulaqlıqları", "Tədbir yayımı"],
         tag: "Komanda",
@@ -128,7 +171,7 @@ export const demoVenues: DemoVenue[] = [
       {
         id: "fairplay-ps",
         title: "PlayStation 5",
-        pricePerHour: 5,
+        pricePerHour: 8,
         specs: ["PS5 konsolu", "65″ 4K ekran", "2 × DualSense", "VIP lounge"],
         accessories: ["Şarj stansiyası", "İçki menyusu"],
       },
