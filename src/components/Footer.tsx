@@ -82,8 +82,7 @@ export function Footer() {
         </div>
 
         <p className="footer-demo">
-          Saytdakı məkan adları, qiymətlər, reytinqlər və ekranlar nümayiş
-          məqsədli demo məlumatlardır.
+          Qiymətlər AZN/saat · Bakı klubları
         </p>
         <div className="footer-bottom">
           <small>

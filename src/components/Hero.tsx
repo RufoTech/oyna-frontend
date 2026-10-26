@@ -8,7 +8,7 @@ import type { StationHandle } from "../three/station";
 function HeroFallback() {
   const [primary, second, third] = demoVenues;
   const price = (v: (typeof demoVenues)[number]) =>
-    v.tiers[0]?.pricePerHour ?? 2;
+    v.tiers[0]?.pricePerHour ?? 4;
   return (
     <div className="hero-fallback" aria-hidden="true">
       <div className="hero-fallback-glow" />
@@ -225,7 +225,7 @@ export function Hero() {
             Təcrübəyə bax
           </a>
         </div>
-        <p className="hero-note">Tətbiq görüntüləri demodur</p>
+        <p className="hero-note">Qiymətlər AZN/saat · Bakı klubları</p>
       </div>
       <a href="#kesfet" className="scroll-cue" aria-label="Aşağı diyirlə — Kəşf et bölməsi">
         <span aria-hidden="true" />

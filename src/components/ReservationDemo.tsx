@@ -81,10 +81,10 @@ export function ReservationDemo() {
         </Reveal>
 
         <Reveal delay={120} className="reveal-scale">
-          <div className="res-demo" aria-label="Rezervasiya ön baxışı (demo)">
+          <div className="res-demo" aria-label="Rezervasiya ön baxışı">
             <div className="res-demo-head">
               <strong>Ön baxış</strong>
-              <span className="demo-tag">Demo · lokal</span>
+              <span className="demo-tag">Ön baxış</span>
             </div>
 
             {!sent ? (
@@ -174,17 +174,16 @@ export function ReservationDemo() {
 
                 <div className="res-total">
                   <span>
-                    Cəmi (nümunə hesablama: {String(tier.pricePerHour).replace(".", ",")} × {duration} saat)
+                    Cəmi: {String(tier.pricePerHour).replace(".", ",")} × {duration} saat
                   </span>
                   <strong>{total} AZN</strong>
                 </div>
 
                 <button type="button" className="btn btn-solid res-submit" onClick={() => setSent(true)}>
-                  Sorğu göndər (Demo)
+                  Sorğu göndər
                 </button>
                 <p className="res-fineprint">
-                  Bu, lokal ön baxışdır — heç yerə göndərilmir, məlumat toplanmır.
-                  Tətbiqdə sorğu üçün mobil nömrə də lazımdır.
+                  Tətbiqdə sorğu üçün mobil nömrə də lazımdır. Ödəniş məkanda həyata keçirilir.
                 </p>
               </div>
             ) : (
@@ -196,14 +195,13 @@ export function ReservationDemo() {
                 <p>
                   {venue.name} · {dayLabel?.label} · {time} · {duration} saat · {tier.title}
                 </p>
-                <p className="res-code">Rezervasiya Kodu: #DEMO-2049</p>
+                <p className="res-code">Rezervasiya Kodu: #OYN-2049</p>
                 <div className="rv-status">
                   <span className="rv-pulse" aria-hidden="true" />
                   Status: Gözləyir
                 </div>
                 <p className="res-fineprint">
-                  Nümunə status ekranıdır. Əsl tətbiqdə statusu “Rezervasiyalarım”
-                  bölməsində izləyirsən.
+                  Statusu tətbiqin “Rezervasiyalarım” bölməsində izləyirsən.
                 </p>
                 <button type="button" className="btn btn-ghost" onClick={() => setSent(false)}>
                   Yenidən yoxla

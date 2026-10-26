@@ -6,7 +6,7 @@ function VenueVisual() {
   const venue = demoVenues[0];
   return (
     <div className="story-visual venue-visual">
-      <span className="demo-tag">Bakı klubu · demo qiymətlər</span>
+      <span className="demo-tag">Bakı · LaLiga Game Center</span>
       <div className="vv-gallery" aria-hidden="true">
         <div className="vv-photo main">
           <img src={venue.galleryPhotos[0]} alt="" loading="lazy" decoding="async" />
@@ -45,7 +45,7 @@ function TierVisual() {
   const tiers = demoVenues[0].tiers;
   return (
     <div className="story-visual tier-visual">
-      <span className="demo-tag">Demo qiymətlər</span>
+      <span className="demo-tag">Saatlıq qiymətlər · AZN</span>
       <ul>
         {tiers.map((t) => (
           <li key={t.id} className={t.tag ? "hot" : ""}>
@@ -65,9 +65,10 @@ function TierVisual() {
 }
 
 function ReservationVisual() {
+  const pro = demoVenues[0].tiers.find((t) => t.title === "Pro") ?? demoVenues[0].tiers[0];
   return (
     <div className="story-visual res-visual">
-      <span className="demo-tag dark">Demo sorğu</span>
+      <span className="demo-tag dark">Rezervasiya sorğusu</span>
       <div className="rv-grid">
         <div className="rv-block">
           <small>Tarix</small>
@@ -97,8 +98,8 @@ function ReservationVisual() {
         <div className="rv-block">
           <small>Tier</small>
           <div className="rv-tier">
-            <strong>Pro</strong>
-            <span>3.5 AZN/saat</span>
+            <strong>{pro.title}</strong>
+            <span>{pro.pricePerHour} AZN/saat</span>
           </div>
         </div>
       </div>

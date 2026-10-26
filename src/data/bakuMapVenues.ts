@@ -15,6 +15,24 @@ export interface BakuMapVenue {
 
 export const bakuMapVenues: BakuMapVenue[] = [
   {
+    id: "laliga-nizami",
+    name: "LaLiga Game Center",
+    lat: 40.3725836,
+    lng: 49.8393226,
+    address: "Nizami küç. 66d, Nəsimi",
+    rating: 4.6,
+    photo: "/venues/laliga-nizami.jpg",
+  },
+  {
+    id: "laliga-genclik",
+    name: "La Liga Game Center Gənclik",
+    lat: 40.3968,
+    lng: 49.8515,
+    address: "Fətəli Xan Xoyski pr., Nərimanov",
+    rating: 4.5,
+    photo: "/venues/laliga-genclik.jpg",
+  },
+  {
     id: "game-club-rustam",
     name: "GAME CLUB",
     lat: 40.3887084,
