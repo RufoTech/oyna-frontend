@@ -4,6 +4,7 @@ import { useScrolled } from "../hooks";
 const links = [
   { href: "#kesfet", label: "Kəşf et" },
   { href: "#nasil-calisir", label: "Tətbiq necə işləyir" },
+  { href: "#qalereya", label: "Qalereya" },
   { href: "#imkanlar", label: "İmkanlar" },
   { href: "#treyler", label: "Treyler" },
   { href: "#faq", label: "FAQ" },
