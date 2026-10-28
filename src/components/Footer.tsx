@@ -3,6 +3,7 @@ import { siteConfig } from "../config";
 const pageLinks = [
   { href: "#kesfet", label: "Kəşf et" },
   { href: "#nasil-calisir", label: "Tətbiq necə işləyir" },
+  { href: "/gallery", label: "Qalereya" },
   { href: "#imkanlar", label: "İmkanlar" },
   { href: "#rezervasiya", label: "Rezervasiya" },
   { href: "#faq", label: "FAQ" },

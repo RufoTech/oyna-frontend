@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         'privacy-admin': resolve(__dirname, 'privacy-admin/index.html'),
+        gallery: resolve(__dirname, 'gallery/index.html'),
       },
     },
   },
