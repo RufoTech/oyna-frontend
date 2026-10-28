@@ -3,7 +3,6 @@ import { Hero } from "./components/Hero";
 import { CapabilityStrip } from "./components/CapabilityStrip";
 import { Story } from "./components/Story";
 import { Showcase } from "./components/Showcase";
-import { AppGallery } from "./components/AppGallery";
 import { Features } from "./components/Features";
 import { ReservationDemo } from "./components/ReservationDemo";
 import { Trailer } from "./components/Trailer";
@@ -26,7 +25,6 @@ export default function App() {
         <CapabilityStrip />
         <Story />
         <Showcase />
-        <AppGallery />
         <Features />
         <ReservationDemo />
         <Trailer />
