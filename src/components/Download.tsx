@@ -49,7 +49,7 @@ export function Download() {
           <div className="store-row">
             {stores.map((s) =>
               s.url ? (
-                <a key={s.name} href={s.url} className="store-btn" rel="noopener">
+                <a key={s.name} href={s.url} className="store-btn" target="_blank" rel="noopener">
                   {s.icon}
                   <span>
                     <small>{s.detail}</small>

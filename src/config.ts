@@ -1,16 +1,14 @@
 /**
  * Single configuration point for owner-verified links and contact details.
  *
- * Store URLs are NOT yet verified — they are intentionally empty. When the
- * owner provides the official App Store / Google Play links, fill them in here
- * and the download buttons across the site will activate automatically.
- * Until then the buttons render honestly as "Tezliklə" (coming soon).
+ * Official App Store and Google Play URLs. Download buttons across the site
+ * read these values and open the store pages in a new tab.
  */
 export const siteConfig = {
-  /** Official App Store URL. Empty = not verified yet. */
-  appStoreUrl: "",
-  /** Official Google Play URL. Empty = not verified yet. */
-  googlePlayUrl: "",
+  /** Official App Store URL. */
+  appStoreUrl: "https://apps.apple.com/az/app/oyna-i-nternet-klub-rezervi/id6815271415" as string,
+  /** Official Google Play URL. */
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=com.oynaaz.app" as string,
   /**
    * Support email. Found in the Flutter app's own privacy-policy text
    * (lib/l10n/app_az.arb -> privacyPolicyContent), so it is product-source

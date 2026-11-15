@@ -42,7 +42,7 @@ export function Footer() {
             <ul>
               <li>
                 {appStoreUrl ? (
-                  <a href={appStoreUrl} rel="noopener">
+                  <a href={appStoreUrl} target="_blank" rel="noopener">
                     App Store
                   </a>
                 ) : (
@@ -53,7 +53,7 @@ export function Footer() {
               </li>
               <li>
                 {googlePlayUrl ? (
-                  <a href={googlePlayUrl} rel="noopener">
+                  <a href={googlePlayUrl} target="_blank" rel="noopener">
                     Google Play
                   </a>
                 ) : (
